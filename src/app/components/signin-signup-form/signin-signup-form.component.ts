@@ -6,8 +6,11 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./signin-signup-form.component.css']
 })
 export class SigninSignupFormComponent implements OnInit {
+
   @Input() signIn: boolean;
   @Input() signUp: boolean;
+  @Input() active: boolean;
+
 
   constructor() {
   }

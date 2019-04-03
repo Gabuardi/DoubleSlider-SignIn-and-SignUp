@@ -1,4 +1,6 @@
-<div class="form-container">
+<div class="form-container" [class.sign-in-container]="signIn" [class.sign-up-container]="signUp"
+     [class.sign-in-container-active]="signIn && active"
+     [class.sign-up-container-active]="signUp && active">
   <form action="#">
 
     <!-- SIGN UP -->

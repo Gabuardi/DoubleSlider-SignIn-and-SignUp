@@ -1,6 +1,6 @@
 <div class="double-slider-sign-container">
-  <app-signin-signup-form class="sign-up-container" [signUp]="true"></app-signin-signup-form>
-  <app-signin-signup-form class="sign-in-container" [signIn]="true"></app-signin-signup-form>
-  <app-double-slider-sign-overlay></app-double-slider-sign-overlay>
+  <app-signin-signup-form [signUp]="true" [active]="active"></app-signin-signup-form>
+  <app-signin-signup-form [signIn]="true" [active]="active"></app-signin-signup-form>
+  <app-double-slider-sign-overlay (overlayActives)="swapForm()"></app-double-slider-sign-overlay>
 </div>
 

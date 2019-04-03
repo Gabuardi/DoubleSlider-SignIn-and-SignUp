@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-double-slider-sign-overlay',
@@ -13,6 +13,7 @@ export class DoubleSliderSignOverlayComponent implements OnInit {
   signUpOverlayData: any;
   leftPanelStyle = {transform: 'translateX(-20%)'};
   rightPanelStyle = {right: 0, transform: 'translateX(0)'};
+  @Output() overlayActives: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {
     this.signInOverlayData = {
@@ -35,6 +36,7 @@ export class DoubleSliderSignOverlayComponent implements OnInit {
     this.rightPanelStyle = value.rightPanelStyle;
     this.overlayContainerActive = !this.overlayContainerActive;
     this.overlayActive = !this.overlayActive;
+    this.overlayActives.emit();
   }
 
   ngOnInit() {

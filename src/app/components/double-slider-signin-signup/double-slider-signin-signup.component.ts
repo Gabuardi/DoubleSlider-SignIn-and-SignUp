@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-double-slider-signin-signup',
@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoubleSliderSigninSignupComponent implements OnInit {
 
-  constructor() { }
+  active = false;
+
+  constructor() {
+  }
+
+  swapForm() {
+    this.active = !this.active;
+  }
 
   ngOnInit() {
   }
