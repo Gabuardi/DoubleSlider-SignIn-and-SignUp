@@ -1,0 +1,38 @@
+<div class="form-container">
+  <form action="#">
+
+    <!-- SIGN UP -->
+    <h1 *ngIf="signUp">Create Account</h1>
+    <!-- SIGN IN -->
+    <h1 *ngIf="signIn">Sign In</h1>
+
+    <!-- BOTH -->
+    <div class="social-container">
+      <a href="#">
+        <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
+      </a>
+      <a href="#">
+        <fa-icon [icon]="['fab', 'google']"></fa-icon>
+      </a>
+      <a href="#">
+        <fa-icon [icon]="['fab', 'linkedin-in']"></fa-icon>
+      </a>
+    </div>
+
+    <!-- SIGN UP -->
+    <span *ngIf="signUp">or use your email for registration</span>
+    <input type="text" placeholder="Name" *ngIf="signUp"/>
+    <!-- SIGN IN -->
+    <span *ngIf="signIn">or use your account</span>
+
+    <!-- BOTH -->
+    <input type="email" placeholder="Email"/>
+    <input type="password" placeholder="Password"/>
+
+    <!-- SIGN IN -->
+    <a *ngIf="signIn" href="#">Forgot your password?</a>
+    <button *ngIf="signIn">Sign In</button>
+    <!-- SIGN UP -->
+    <button *ngIf="signUp">Sign Up</button>
+  </form>
+</div>
