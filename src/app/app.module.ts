@@ -7,13 +7,15 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faFacebookF, faGoogle, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 import { DoubleSliderSignOverlayComponent } from './components/double-slider-sign-overlay/double-slider-sign-overlay.component';
+import { DoubleSliderOverlayPanelComponent } from './components/double-slider-overlay-panel/double-slider-overlay-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DoubleSliderSigninSignupComponent,
     SigninSignupFormComponent,
-    DoubleSliderSignOverlayComponent
+    DoubleSliderSignOverlayComponent,
+    DoubleSliderOverlayPanelComponent
   ],
   imports: [
     BrowserModule,
